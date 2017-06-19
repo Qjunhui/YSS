@@ -1,7 +1,6 @@
 import Login from './views/Login.vue'
 import NotFound from './views/404.vue'
 import Home from './views/Home.vue'
-import Main from './views/Main.vue'
 import Teacher from './views/1.0版样例/Teacher.vue'
 import Student from './views/1.0版样例/Student.vue'
 import user from './views/1.0版样例/user.vue'
@@ -20,17 +19,15 @@ let routes = [
         name: '',
         hidden: true
     },
-    //{ path: '/main', component: Main },
     {
         path: '/',
         component: Home,
         name: '1.0版样例',
         iconCls: 'el-icon-message',//图标样式class
         children: [
-            { path: '/main', component: Main, name: '主页', hidden: true },
             { path: '/teacher', component: Teacher, name: 'Teacher' },
             { path: '/student', component: Student, name: 'Student' },
-            { path: '/user', component: user, name: '列表' },
+            { path: '/user', component: user, name: 'User' },
         ]
     },
     {
